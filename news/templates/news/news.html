@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>News Portal</title>
+    <link rel="stylesheet" href="{% static 'news/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Latest News</h1>
+        <button id="generate">Generate News</button>
+        <div id="articles">
+            <p>Loading articles...</p>
+        </div>
+    </div>
+
+    <script src="{% static 'news/main.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+body {
+  font-family: sans-serif;
+  padding: 20px;
+  background: #f2f2f2;
+}
+
+h1 {
+  text-align: center;
+}
+
+button {
+  display: block;
+  margin: 15px auto;
+  padding: 10px 20px;
+  background: #4287f5;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#articles {
+  max-width: 600px;
+  margin: 20px auto;
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.article {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
