@@ -1,4 +1,4 @@
-// CSRF token setup
+
 function getCookie(name) {
     let cookieValue = null;
     if (document.cookie && document.cookie !== '') {
@@ -15,7 +15,7 @@ function getCookie(name) {
 }
 const csrftoken = getCookie('csrftoken');
 
-// WebSocket connection
+
 const socket = new WebSocket('ws://' + window.location.host + '/ws/news/');
 
 socket.onmessage = function(e) {
@@ -31,7 +31,7 @@ socket.onmessage = function(e) {
     container.prepend(div);
 };
 
-// Load existing articles from API
+
 async function loadArticles() {
     const res = await fetch('/api/articles/');
     const data = await res.json();
@@ -49,7 +49,7 @@ async function loadArticles() {
     });
 }
 
-// Auto-generate article
+
 async function generateArticle() {
     await fetch('/api/generate-news/', {
         method: 'POST',
@@ -64,7 +64,7 @@ async function generateArticle() {
     });
 }
 
-// Manual article creation
+
 async function createManualArticle(title, content) {
     await fetch('/api/generate-news/', {
         method: 'POST',
@@ -76,12 +76,10 @@ async function createManualArticle(title, content) {
     });
 }
 
-// Event listeners
+
 document.addEventListener('DOMContentLoaded', () => {
-    // Generate button
     document.getElementById('generate').addEventListener('click', generateArticle);
 
-    // Manual form submission
     document.getElementById('manual-article-form').addEventListener('submit', async (e) => {
         e.preventDefault();
         const title = document.getElementById('title').value;
@@ -91,6 +89,5 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('content').value = '';
     });
 
-    // Load articles on page load
     loadArticles();
 });
