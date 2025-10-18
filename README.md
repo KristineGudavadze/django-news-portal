@@ -22,9 +22,9 @@ git clone https://github.com/KristineGudavadze/news_portal.git
 cd news_portal
 ```
 # create & activate virtual environment
-python3 -m venv venv
-source venv/bin/activate  # Linux/macOS
-venv\Scripts\activate    # Windows
+- python3 -m venv venv
+- source venv/bin/activate  # Linux/macOS
+- venv\Scripts\activate    # Windows
 
 # Install dependencies
 pip install -r requirements.txt
@@ -51,8 +51,8 @@ uvicorn news_portal.asgi:application --reload --port 8000
 ```
 
 # API Endpoints
-GET /api/articles/ – Fetch all articles
-POST /api/generate-news/ – Generate a new article (WebSocket broadcast)
+- GET /api/articles/ – Fetch all articles
+- POST /api/generate-news/ – Generate a new article (WebSocket broadcast)
 
 # Frontend Highlights
 - Manual article form & “Generate Article” button
