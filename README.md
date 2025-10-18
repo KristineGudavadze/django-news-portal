@@ -15,19 +15,32 @@ A real-time news portal built with **Django**, **Django REST Framework**, and **
 1. Clone the repository:
 ```bash
 git clone https://github.com/KristineGudavadze/news_portal.git
+```
+```bash
 cd news_portal
 ```
 # create & activate virtual environment
-- python3 -m venv venv
-- source venv/bin/activate  # Linux/macOS
-- venv\Scripts\activate    # Windows
-
+```bash
+python3 -m venv venv
+```
+```bash
+source venv/bin/activate  # Linux/macOS
+```
+```bash
+venv\Scripts\activate    # Windows
+```
 # Install dependencies
+```bash
 pip install -r requirements.txt
+```
 
 # Apply migrations & collect static files
-- python manage.py migrate
-- python manage.py collectstatic
+```bash
+python manage.py migrate
+```
+```bash
+python manage.py collectstatic
+```
 
 # Running the App
 
