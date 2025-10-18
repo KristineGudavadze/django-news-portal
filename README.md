@@ -5,15 +5,11 @@ A real-time news portal built with **Django**, **Django REST Framework**, and **
 ## Features
 - Live news updates with WebSockets
 - REST API for fetching and generating articles
+- Ability to create a post through the API and see it immediately reflected on the page
 - Manual article creation via form
 - Responsive frontend with JavaScript & CSS
-- ASGI support (works with Daphne/Uvicorn)
-- Static file management with WhiteNoise
 
-## Recent Updates
-- main.js: cleaned code, added manual article form, WebSocket handling
-- news.html: added manual article form alongside the Generate button
-- settings.py: WhiteNoise added, static files prepared for ASGI servers
+
 
 ## Installation
 1. Clone the repository:
@@ -37,7 +33,7 @@ pip install -r requirements.txt
 
 Before running the ASGI server, make sure to collect static files.
 
-### Step 1: (Optional) Run Django server for testing
+### Step 1: Run Django server for testing
 ```bash
 python manage.py runserver
 ```
@@ -65,3 +61,4 @@ uvicorn news_portal.asgi:application --reload --port 8000
 - Ensure STATIC_ROOT and STATICFILES_DIRS are correctly configured in settings.py
 - Always run Django commands from the project folder news_portal (not the repo root)
 - The venv/ folder is ignored; recreate it locally using python3 -m venv venv
+- Creating a post via the API endpoint will update the page immediately through WebSockets
