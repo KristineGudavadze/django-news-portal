@@ -1,64 +1,122 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Segoe UI", sans-serif;
+  margin: 0;
   background-color: #f5f7fa;
-  color: #333;
-  margin: 0;
-  padding: 40px 0;
-}
-
-.container {
-  width: 600px;
-  margin: auto;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  padding: 20px 30px;
-}
-
-h1 {
-  text-align: center;
-  color: #1a1a1a;
-}
-
-button {
-  display: block;
-  margin: 20px auto;
-  padding: 10px 20px;
-  background-color: #2c7be5;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 15px;
-  transition: background-color 0.3s ease;
-}
-
-button:hover {
-  background-color: #1a68d1;
-}
-
-.article {
-  border-bottom: 1px solid #e0e0e0;
-  padding: 15px 0;
-}
-
-.article:last-child {
-  border-bottom: none;
-}
-
-.article h3 {
-  margin: 0;
-  font-size: 18px;
   color: #222;
 }
 
-.article p {
-  margin: 8px 0;
-  font-size: 15px;
-  line-height: 1.5;
+.container {
+  width: 90%;
+  max-width: 800px;
+  margin: 2rem auto;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
 }
 
-.article small {
-  color: #888;
-  font-size: 13px;
+.page-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1f0050;
+  margin-bottom: 1.5rem;
+}
+
+.btn {
+  display: block;
+  margin: 0.8rem auto;
+  background-color: #1f0050;
+  color: white;
+  padding: 0.6rem 1.6rem;
+  border-radius: 8px;
+  border: 1px solid #1f0050;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #320777;
+  border-color: #320777;
+}
+
+.add-article-container {
+  width: 100%;
+  max-width: 35rem;
+  margin: 2rem auto;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  padding: 1.5rem 2rem;
+}
+
+.add-article-container h2 {
+  text-align: center;
+  font-size: 1.6rem;
+  color: #1f0050;
+  margin-bottom: 1.5rem;
+}
+
+.form-control {
+  margin-bottom: 1.2rem;
+}
+
+.form-control label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.form-control input,
+.form-control textarea {
+  font: inherit;
+  padding: 0.6rem 0.75rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+  background-color: #fafafa;
+}
+
+.form-control input:focus,
+.form-control textarea:focus {
+  border-color: #1f0050;
+  outline: none;
+  background-color: #f4eeff;
+  box-shadow: 0 0 4px rgba(31, 0, 80, 0.3);
+}
+
+.form-control textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+#articles {
+  margin-top: 2rem;
+}
+
+.article {
+  border-top: 1px solid #e0e0e0;
+  padding-top: 1rem;
+  margin-top: 1rem;
+}
+
+.article h3 {
+  font-size: 1.2rem;
+  color: #1f0050;
+  margin-bottom: 0.4rem;
+}
+
+.article p {
+  margin: 0.4rem 0;
+  line-height: 1.4;
+}
+
+.article .date {
+  font-size: 0.85rem;
+  color: #666;
 }
